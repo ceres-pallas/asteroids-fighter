@@ -4,7 +4,7 @@
   "description": "Ze destroyer of androids!",
   "main": "lib/fighter.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/RobinvanKaathoven/asteroids-fighter/issues"
   },
-  "homepage": "https://github.com/RobinvanKaathoven/asteroids-fighter"
+  "homepage": "https://github.com/RobinvanKaathoven/asteroids-fighter",
+  "devDependencies": {
+    "chai": "~1.8.1",
+    "mocha": "~1.17.0"
+  },
+  "dependencies": {
+    "asteroids-velocity": "~0.3.0"
+  }
 }
