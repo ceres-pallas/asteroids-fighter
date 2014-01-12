@@ -1,4 +1,5 @@
-asteroids-velocity
+asteroids-figther [![Build Status](https://travis-ci.org/ceres-pallas/asteroids-fighter.png?branch=master)](https://travis-ci.org/ceres-pallas/asteroids-fighter)
 ==================
 
-Velocity entity for the Asteroids object
+
+Ze destroyer of asteroids!
