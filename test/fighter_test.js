@@ -1,6 +1,7 @@
 var expect = require('chai').expect;
 
 var Fighter = require('../lib/fighter.js');
+var Bullet = require('
 
 describe('Fighter', function() {
     it('should exist', function() {
@@ -14,6 +15,11 @@ describe('Fighter', function() {
     it('should be an instance a velocity', function() {
 	expect(new Fighter()).to.be.a.instanceof(require('asteroids-velocity'));
     });
+
+    it('should have a function to fire', function() {
+	expect(new Fighter().fire).to.be.a('function');
+    });
+
 
 
 });
