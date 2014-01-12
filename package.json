@@ -1,0 +1,23 @@
+{
+  "name": "asteroids-fighter",
+  "version": "0.0.0",
+  "description": "Ze destroyer of androids!",
+  "main": "lib/fighter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/RobinvanKaathoven/asteroids-fighter.git"
+  },
+  "keywords": [
+    "asteroids",
+    "fighter"
+  ],
+  "author": "Robin van Kaathoven",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobinvanKaathoven/asteroids-fighter/issues"
+  },
+  "homepage": "https://github.com/RobinvanKaathoven/asteroids-fighter"
+}
