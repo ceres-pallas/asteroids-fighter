@@ -1,7 +1,7 @@
 var expect = require('chai').expect;
 
+var Bullet = require('asteroids-bullet');
 var Fighter = require('../lib/fighter.js');
-var Bullet = require('
 
 describe('Fighter', function() {
     it('should exist', function() {
@@ -27,20 +27,20 @@ describe('Fighter', function() {
 
 describe('initializer', function(){
     it('should call the initializer function', function(done) {
-	var fighter = new Fighter ( function () { 
-	    done(); 
-	});	
+	var fighter = new Fighter ( function () {
+	    done();
+	});
     });
     it('should pass the fighter as an argument to the initializer', function() {
 
-	new Fighter ( function (fighter) { 
+	new Fighter ( function (fighter) {
 	    expect(fighter).to.exist;
-	});	
+	});
     });
     it('should pass the fighter as a context as well as an argument', function() {
 
-	new Fighter ( function (fighter) { 
+	new Fighter ( function (fighter) {
 	    expect(fighter).to.equal(this);
-	});	
+	});
     });
-}); 
+});

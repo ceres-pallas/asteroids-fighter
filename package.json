@@ -1,6 +1,6 @@
 {
   "name": "asteroids-fighter",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Ze destroyer of androids!",
   "main": "lib/fighter.js",
   "scripts": {
@@ -25,6 +25,7 @@
     "mocha": "~1.17.0"
   },
   "dependencies": {
-    "asteroids-velocity": "~0.3.0"
+    "asteroids-velocity": "~0.4.0",
+    "asteroids-bullet": "~0.1.0"
   }
 }
