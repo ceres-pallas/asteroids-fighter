@@ -12,8 +12,8 @@ describe('Fighter', function() {
 	expect(Fighter).to.be.a('function');
     });
 
-    it('should be an instance a velocity', function() {
-	expect(new Fighter()).to.be.a.instanceof(require('asteroids-velocity'));
+    it('should be an instance of asteroid', function() {
+	expect(new Fighter()).to.be.a.instanceof(require('asteroids-asteroid'));
     });
 
     it('should have a function to fire', function() {
