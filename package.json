@@ -25,6 +25,6 @@
     "mocha": "~1.17.0"
   },
   "dependencies": {
-    "asteroids-asteroid": "~0.4.0"
+    "asteroids-asteroid": "~0.5.0"
   }
 }
