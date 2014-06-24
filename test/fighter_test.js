@@ -1,6 +1,5 @@
 var expect = require('chai').expect;
 
-var Bullet = require('asteroids-bullet');
 var Fighter = require('../lib/fighter.js');
 
 describe('Fighter', function() {
