@@ -32,15 +32,17 @@ describe('initializer', function(){
         });
     });
 
-    it('should pass the fighter as an argument to the initializer', function() {
+    it('should pass the fighter as an argument to the initializer', function(done) {
         new Fighter (function(fighter) {
             expect(fighter).to.exist;
+			done();
         });
     });
 
-    it('should pass the fighter as a context as well as an argument', function() {
+    it('should pass the fighter as a context as well as an argument', function(done) {
         new Fighter (function (fighter) {
             expect(fighter).to.equal(this);
+			done();
         });
     });
 });
