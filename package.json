@@ -1,6 +1,6 @@
 {
   "name": "asteroids-fighter",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Ze destroyer of androids!",
   "main": "lib/fighter.js",
   "scripts": {
