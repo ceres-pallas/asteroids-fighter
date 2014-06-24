@@ -46,3 +46,15 @@ describe('initializer', function(){
         });
     });
 });
+
+describe('fire', function(){
+	it('should notify observers of fire', function(){
+		var called = false;
+		var fighter = new Fighter();
+		fighter.addListener('fire', function(){ called = true });
+
+		fighter.fire();
+
+		expect(called).to.be.ok;
+	});
+});
