@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/RobinvanKaathoven/asteroids-fighter.git"
+    "url": "git://github.com/ceres-pallas/asteroids-fighter.git"
   },
   "keywords": [
     "asteroids",
@@ -17,9 +17,9 @@
   "author": "Robin van Kaathoven",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobinvanKaathoven/asteroids-fighter/issues"
+    "url": "https://github.com/ceres-pallas/asteroids-fighter/issues"
   },
-  "homepage": "https://github.com/RobinvanKaathoven/asteroids-fighter",
+  "homepage": "https://github.com/ceres-pallas/asteroids-fighter",
   "devDependencies": {
     "chai": "~1.8.1",
     "mocha": "~1.17.0"
