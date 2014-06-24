@@ -57,4 +57,14 @@ describe('fire', function(){
 
 		expect(called).to.be.ok;
 	});
+
+	it('should pass along fighter that fired', function(done){
+		var fighter = new Fighter();
+		fighter.addListener('fire', function(f){
+			expect(f).to.be.eql(fighter);
+			done();
+		});
+
+		fighter.fire();
+	});
 });
