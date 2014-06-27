@@ -67,7 +67,8 @@ describe('fire', function(){
 
 describe('movement', function(){
 	var options = {
-		'speedIncrement': 2
+		'speedIncrement': 2,
+		'rotation': Math.PI/36
 	};
 	var fighter;
 
@@ -110,6 +111,26 @@ describe('movement', function(){
 
 			expect(fighter.speed()).to.equal(0.1); // TODO fix asteroids-velocity to accept 0
 		});
+	});
+
+	describe('rotateLeft', function(){
+		it('should change orientation', function(){
+			fighter.orientation(0);
+
+			fighter.rotateLeft();
+
+			expect(fighter.orientation()).to.equal(options.rotation);
+		});
+	});
+
+	describe('rotateRight', function(){
+		it('should change orientation', function(){
+			fighter.orientation(0);
+
+			fighter.rotateRight();
+
+			expect(fighter.orientation()).to.equal(-options.rotation);
+		})
 	});
 
 })
