@@ -121,6 +121,16 @@ describe('movement', function(){
 
 			expect(fighter.orientation()).to.equal(options.rotation);
 		});
+
+		it('should change heading when locked', function(){
+			fighter.orientation(0);
+			fighter.heading(0);
+
+			fighter.rotateLeft(true);
+
+			expect(fighter.orientation()).to.equal(options.rotation);
+			expect(fighter.heading()).to.equal(options.rotation);
+		});
 	});
 
 	describe('rotateRight', function(){
@@ -131,6 +141,16 @@ describe('movement', function(){
 
 			expect(fighter.orientation()).to.equal(-options.rotation);
 		})
+
+		it('should change heading when locked', function(){
+			fighter.orientation(0);
+			fighter.heading(0);
+
+			fighter.rotateRight(true);
+
+			expect(fighter.orientation()).to.equal(-options.rotation);
+			expect(fighter.heading()).to.equal(-options.rotation);
+		});
 	});
 
 	describe('turnLeft', function(){
@@ -139,6 +159,16 @@ describe('movement', function(){
 
 			fighter.turnLeft();
 
+			expect(fighter.heading()).to.equal(options.rotation);
+		});
+
+		it('should change orientation when locked', function(){
+			fighter.orientation(0);
+			fighter.heading(0);
+
+			fighter.turnLeft(true);
+
+			expect(fighter.orientation()).to.equal(options.rotation);
 			expect(fighter.heading()).to.equal(options.rotation);
 		});
 	});
@@ -151,5 +181,15 @@ describe('movement', function(){
 
 			expect(fighter.heading()).to.equal(-options.rotation);
 		})
+
+		it('should change orientation when locked', function(){
+			fighter.orientation(0);
+			fighter.heading(0);
+
+			fighter.turnRight(true);
+
+			expect(fighter.orientation()).to.equal(-options.rotation);
+			expect(fighter.heading()).to.equal(-options.rotation);
+		});
 	});
 })
