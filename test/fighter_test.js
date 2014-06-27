@@ -66,16 +66,50 @@ describe('fire', function(){
 });
 
 describe('movement', function(){
+	var options = {
+		'speedIncrement': 2
+	};
 	var fighter;
 
 	beforeEach(function(){
-		fighter = new Fighter();
+		fighter = new Fighter(function(){}, options);
 	});
 
 	['rotateLeft', 'rotateRight', 'turnLeft', 'turnRight', 'speedUp', 'slowDown'].forEach(function(method){
 		it('should respond to ' + method, function(){
 			expect(fighter).to.respondTo(method);
 		});
+	});
 
-	})
+	describe('speedUp', function(){
+		it('should increase the speed', function(){
+			var start = 1;
+			fighter.speed(start)
+
+			fighter.speedUp();
+
+			expect(fighter.speed()).to.equal(start + options.speedIncrement);
+		});
+	});
+
+	describe('slowUp', function(){
+		it('should decrease the speed', function(){
+			var start = 3;
+			fighter.speed(start)
+
+			fighter.slowDown();
+
+			expect(fighter.speed()).to.equal(start - options.speedIncrement);
+		});
+
+		it('should not decrease the speed below zero', function(){
+			var start = 1;
+			fighter.speed(start)
+
+			fighter.slowDown();
+
+			expect(fighter.speed()).to.equal(0.1); // TODO fix asteroids-velocity to accept 0
+		});
+	});
+
 })
