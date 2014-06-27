@@ -64,3 +64,18 @@ describe('fire', function(){
 		fighter.fire();
 	});
 });
+
+describe('movement', function(){
+	var fighter;
+
+	beforeEach(function(){
+		fighter = new Fighter();
+	});
+
+	['rotateLeft', 'rotateRight', 'turnLeft', 'turnRight', 'speedUp', 'slowDown'].forEach(function(method){
+		it('should respond to ' + method, function(){
+			expect(fighter).to.respondTo(method);
+		});
+
+	})
+})
