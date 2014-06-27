@@ -133,4 +133,23 @@ describe('movement', function(){
 		})
 	});
 
+	describe('turnLeft', function(){
+		it('should change heading', function(){
+			fighter.heading(0);
+
+			fighter.turnLeft();
+
+			expect(fighter.heading()).to.equal(options.rotation);
+		});
+	});
+
+	describe('turnRight', function(){
+		it('should change heading', function(){
+			fighter.heading(0);
+
+			fighter.turnRight();
+
+			expect(fighter.heading()).to.equal(-options.rotation);
+		})
+	});
 })
