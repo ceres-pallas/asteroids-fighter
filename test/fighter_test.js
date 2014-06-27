@@ -18,9 +18,6 @@ describe('Fighter', function() {
     it('should have a function to fire', function() {
         expect(new Fighter().fire).to.be.a('function');
     });
-
-
-
 });
 
 
