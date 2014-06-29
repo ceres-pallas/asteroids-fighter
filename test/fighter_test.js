@@ -139,7 +139,7 @@ describe('movement', function(){
 
 			fighter.slowDown();
 
-			expect(fighter.speed()).to.equal(0.1); // TODO fix asteroids-velocity to accept 0
+			expect(fighter.speed()).to.equal(0);
 		});
 	});
 
