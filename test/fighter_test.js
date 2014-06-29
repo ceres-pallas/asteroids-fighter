@@ -91,6 +91,36 @@ describe('movement', function(){
 
 			expect(fighter.speed()).to.equal(start + options.speedIncrement);
 		});
+
+		it('should not alter orientation', function(){
+			var speed = 1; orientation = 0;
+			fighter.speed(speed)
+			fighter.orientation(orientation);
+
+			fighter.speedUp();
+
+			expect(fighter.orientation()).to.equal(orientation);
+		});
+
+		it('should not alter heading', function(){
+			var speed = 1; heading = 0;
+			fighter.speed(speed)
+			fighter.heading(heading);
+
+			fighter.speedUp();
+
+			expect(fighter.heading()).to.equal(heading);
+		});
+
+		it('should not alter omega', function(){
+			var speed = 1; omega = 0;
+			fighter.speed(speed)
+			fighter.omega(omega);
+
+			fighter.speedUp();
+
+			expect(fighter.omega()).to.equal(omega);
+		});
 	});
 
 	describe('slowUp', function(){
